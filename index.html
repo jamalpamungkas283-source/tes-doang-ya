@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Birthday 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div id="flowers"></div>
+  <canvas id="confetti"></canvas>
+
+  <!-- HALAMAN HITUNG MUNDUR (sebelum 25 Oktober) -->
+  <section class="page" id="countdown">
+    <div class="lock">⏳</div>
+    <h2>Belum waktunya ya...</h2>
+    <p>Kejutan ini baru bisa dibuka tanggal 25 Oktober</p>
+    <div id="timer"></div>
+  </section>
+
+  <!-- HALAMAN 0: PIN -->
+  <section class="page active" id="pin">
+    <div class="lock">🔒</div>
+    <h2>Ada kejutan buat kamu</h2>
+    <p>Masukkan PIN tanggal jadian kita</p>
+    <input id="pinInput" type="password" inputmode="numeric" maxlength="8" placeholder="••••" autocomplete="off">
+    <button id="pinBtn">Buka kejutan</button>
+    <p id="pinError" class="error"></p>
+  </section>
+
+  <!-- HALAMAN 1: SELAMAT ULTAH -->
+  <section class="page" id="p1">
+    <p class="small">Hari ini spesial banget, karena hari ini hari kamu</p>
+    <h1 class="script">Happy Birthday</h1>
+    <h2 id="namaPacar" class="script name"></h2>
+    <button class="next" data-next="p2">Lanjut 💌</button>
+  </section>
+
+  <!-- HALAMAN 2: FOTO -->
+  <section class="page" id="p2">
+    <div class="photo-wrap">
+      <img src="Elsa.JPEG" alt="Foto pacarku" class="photo">
+    </div>
+    <p class="caption">Cantik kamu hari ini, kemarin, dan selamanya.</p>
+    <button class="next" data-next="p3">Lanjut 💌</button>
+  </section>
+
+  <!-- HALAMAN 3: PESAN -->
+  <section class="page" id="p3">
+    <div class="letter">
+      <p id="typed"></p>
+    </div>
+    <button class="next" data-next="p4">Lanjut 💌</button>
+  </section>
+
+  <!-- HALAMAN 4: PENUTUP -->
+  <section class="page" id="p4">
+    <h1 class="script big">I love you</h1>
+    <p class="caption">Selamat ulang tahun, sayang. Semoga semua doamu terkabul 🎂</p>
+    <button class="next" data-next="p1">Ulangi dari awal 🔁</button>
+  </section>
+
+  <div id="curtain"><span>💖</span></div>
+  <button id="musicBtn" title="Putar / jeda musik">🎵</button>
+  <audio id="music" src="musik.mp3" loop preload="auto"></audio>
+
+  <script src="Script.js"></script>
+</body>
+</html>
